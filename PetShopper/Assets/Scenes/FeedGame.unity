@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044994717d0c572488ef593a86647afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodObj: {fileID: 946546234}
+  foodObj: {fileID: 192419786746829737, guid: 5a7bc083226b51845bfef00c75c04495, type: 3}
   spawnLoc: {fileID: 2016100557}
 --- !u!1 &901520764
 GameObject:
@@ -661,11 +661,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &946546234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 192419786746829737, guid: 5a7bc083226b51845bfef00c75c04495, type: 3}
-  m_PrefabInstance: {fileID: 3316468484260449218}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992857602
 GameObject:
   m_ObjectHideFlags: 0
