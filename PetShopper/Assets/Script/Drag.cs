@@ -13,6 +13,10 @@ public class Drag : MonoBehaviour
 	public bool m_DrawDragLine = true;
 	public Color m_Color = Color.cyan;
 
+	public float forceNum = 10f;
+
+	public float maxSpeed = 5f;
+
 	private TargetJoint2D m_TargetJoint;
 
 	void Update ()
@@ -61,14 +65,22 @@ public class Drag : MonoBehaviour
             Rigidbody2D heldBody = m_TargetJoint.GetComponent<Rigidbody2D>();
             if (heldBody != null)
             {
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    heldBody.AddForce(Vector2.left * 10f, ForceMode2D.Impulse); // Force to the left
-                }
-                else if (Input.GetKeyDown(KeyCode.A))
-                {
-                    heldBody.AddForce(Vector2.right * 10f, ForceMode2D.Impulse); // Force to the right
-                }
+				Vector2 moveDirection = Vector2.zero;
+
+				if (Input.GetKey(KeyCode.D))
+    				moveDirection += Vector2.left;
+				if (Input.GetKey(KeyCode.A))
+    				moveDirection += Vector2.right;
+
+				if (moveDirection != Vector2.zero)
+				{
+    				heldBody.AddForce(moveDirection.normalized * forceNum * Time.deltaTime, ForceMode2D.Force);
+				}
+
+				if (heldBody.linearVelocity.magnitude > maxSpeed)
+				{
+    				heldBody.linearVelocity = heldBody.linearVelocity.normalized * maxSpeed;
+				}
             }
         }
 	}
