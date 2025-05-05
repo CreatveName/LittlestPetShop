@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Draggable
   - Yummy
+  - Soap
   layers:
   - Default
   - TransparentFX
