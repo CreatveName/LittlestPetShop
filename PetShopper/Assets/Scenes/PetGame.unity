@@ -1043,6 +1043,7 @@ MonoBehaviour:
   destroySound: {fileID: 0}
   audioSource: {fileID: 0}
   brushTag: Soap
+  mySlider: {fileID: 1011650762}
 --- !u!1 &1825059587
 GameObject:
   m_ObjectHideFlags: 0
