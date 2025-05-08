@@ -27,9 +27,15 @@ public class Eat : MonoBehaviour
                 UpdateText(); // Initial display
             }
         }
-        mySlider.minValue = 0f;
-        mySlider.maxValue = 100f;
-        mySlider.value = mySlider.minValue;
+        if(mySlider != null)
+        {
+            mySlider.minValue = 0f;
+            mySlider.maxValue = 100f;
+            mySlider.value = mySlider.minValue;
+        }else
+        {
+            return;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

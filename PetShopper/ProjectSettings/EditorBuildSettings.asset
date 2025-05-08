@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMap.unity
     guid: 80ce25d377b5a2045b3e0366ee2122f4
+  - enabled: 1
+    path: Assets/Scenes/FeedGame.unity
+    guid: 4227414f9b2b6464ca7228756cbb8404
+  - enabled: 1
+    path: Assets/Scenes/PetGame.unity
+    guid: 3818f0ede4c4e2a488594afb404377d4
+  - enabled: 1
+    path: Assets/Scenes/Scene Transitions.unity
+    guid: 183736caceacc0a4c9b4b6385ed73e7f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
