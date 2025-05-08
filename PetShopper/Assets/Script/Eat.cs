@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Eat : MonoBehaviour
@@ -9,6 +10,11 @@ public class Eat : MonoBehaviour
     public string brushTag = "Soap";
     public static int brushCount = 0;
     public static TextMeshProUGUI brushText;
+
+    private static float countCD = 0.1f;
+    private static float lastCT = -999f;
+
+    public Slider mySlider;
 
     private void Start() 
     {
@@ -21,6 +27,9 @@ public class Eat : MonoBehaviour
                 UpdateText(); // Initial display
             }
         }
+        mySlider.minValue = 0f;
+        mySlider.maxValue = 100f;
+        mySlider.value = mySlider.minValue;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -35,9 +44,11 @@ public class Eat : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(other.CompareTag(brushTag))
+        if(other.CompareTag(brushTag) && Time.time - lastCT > countCD && brushCount < mySlider.maxValue)
         {
             brushCount++;
+            lastCT = Time.time;
+            mySlider.value = brushCount;
             UpdateText();
         }
     }
@@ -46,7 +57,7 @@ public class Eat : MonoBehaviour
     {
         if (brushText != null)
         {
-            brushText.text = "Brushes: " + brushCount;
+            brushText.text = brushCount + "%";
         }
     }
 }
