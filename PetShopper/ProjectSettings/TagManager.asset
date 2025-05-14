@@ -7,6 +7,8 @@ TagManager:
   - Draggable
   - Yummy
   - Soap
+  - NPC
+  - Interact
   layers:
   - Default
   - TransparentFX

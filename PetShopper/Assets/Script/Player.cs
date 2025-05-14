@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float _speed = 2.0f;
+    public float _speed = 4.0f;
     public float _sprint = 7.0f;
+    private IInteractable currentInteractable;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +25,26 @@ public class Player : MonoBehaviour
             _speed = _sprint; 
         }else{
             _speed = 2.0f; 
+        }
+
+        if(currentInteractable != null && Input.GetKeyDown(KeyCode.E))
+        {
+            currentInteractable.Interact();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.TryGetComponent(out IInteractable interactable))
+        {
+            currentInteractable = interactable;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out IInteractable interactable) && interactable == currentInteractable)
+        {
+            currentInteractable = null;
         }
     }
 }

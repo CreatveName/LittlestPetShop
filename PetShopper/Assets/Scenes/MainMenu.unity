@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68cf2a32778737409cfa51f8834c10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: MainMap
+  gameScene: PetShop
 --- !u!1 &1347316579
 GameObject:
   m_ObjectHideFlags: 0
