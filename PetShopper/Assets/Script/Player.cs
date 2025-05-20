@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1){
             transform.Translate(0, Input.GetAxisRaw("Vertical") * _speed * Time.deltaTime, 0);
         }else if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1){
