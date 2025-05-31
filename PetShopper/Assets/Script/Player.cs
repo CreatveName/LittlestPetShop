@@ -26,9 +26,13 @@ public class Player : MonoBehaviour
             transform.Translate(Input.GetAxisRaw("Horizontal") * _speed * Time.deltaTime, 0, 0); 
         }
        
-        if (Input.GetKey(KeyCode.LeftShift)){
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
             _speed = _sprint; 
-        }else{
+        }
+        
+        else
+        {
             _speed = 2.0f; 
         }
 
