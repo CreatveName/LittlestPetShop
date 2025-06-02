@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
     public float _sprint = 7.0f;
     private IInteractable currentInteractable;
 
+    [SerializeField] 
+    private Animator pAnim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,31 +18,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            return;
-        }
-
-        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1){
-            transform.Translate(0, Input.GetAxisRaw("Vertical") * _speed * Time.deltaTime, 0);
-        }else if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1){
-            transform.Translate(Input.GetAxisRaw("Horizontal") * _speed * Time.deltaTime, 0, 0); 
-        }
-       
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            _speed = _sprint; 
-        }
-        
-        else
-        {
-            _speed = 2.0f; 
-        }
-
-        if(currentInteractable != null && Input.GetKeyDown(KeyCode.E))
-        {
-            currentInteractable.Interact();
-        }
+        PlayerMovement();
+        InteractDialogue();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -54,6 +34,80 @@ public class Player : MonoBehaviour
         if (other.TryGetComponent(out IInteractable interactable) && interactable == currentInteractable)
         {
             currentInteractable = null;
+        }
+    }
+
+    private void PlayerMovement()
+    {
+        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1)
+        {
+            pAnim.SetBool("Left", false);
+            pAnim.SetBool("Right", false);
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                pAnim.SetBool("Up", true);
+                pAnim.SetBool("Down", false);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                pAnim.SetBool("Down", true);
+                pAnim.SetBool("Up", false);
+            }
+            else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+            {
+                pAnim.SetBool("Up", false);
+                pAnim.SetBool("Down", false);
+            }
+
+            transform.Translate(0, Input.GetAxisRaw("Vertical") * _speed * Time.deltaTime, 0);
+        }
+        else if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1)
+        {
+            pAnim.SetBool("Up", false);
+            pAnim.SetBool("Down", false);
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                pAnim.SetBool("Right", true);
+                pAnim.SetBool("Left", false);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                pAnim.SetBool("Left", true);
+                pAnim.SetBool("Right", false);
+            }
+            else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+            {
+                pAnim.SetBool("Right", false);
+                pAnim.SetBool("Left", false);
+            }
+
+            transform.Translate(Input.GetAxisRaw("Horizontal") * _speed * Time.deltaTime, 0, 0); 
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _speed = _sprint;
+        }
+
+        else
+        {
+            _speed = 2.0f;
+        }
+
+    }
+
+    private void InteractDialogue()
+    {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
+        if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
+        {
+            currentInteractable.Interact();
         }
     }
 }
