@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1db9a581c9331a744ab37c5e660a3247
+guid: 52439741fe6916f4db551a750bd35cab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6911265404689696774
-    second: dogsprite_0
+      213: 161296838279507523
+    second: pet_sprite_3_0
   - first:
-      213: -4917792305305910923
-    second: dogsprite_1
+      213: -442782923506123528
+    second: pet_sprite_3_1
   - first:
-      213: -4110342618636632165
-    second: dogsprite_2
+      213: -2889634201015462364
+    second: pet_sprite_3_2
   - first:
-      213: -3810575237794750531
-    second: dogsprite_3
+      213: -9192738374627648864
+    second: pet_sprite_3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 52
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,43 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dogsprite_0
+      name: pet_sprite_3_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 26
-        width: 17
-        height: 26
+        x: 4
+        y: 11
+        width: 56
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af7360d5bb04610a0800000000000000
-      internalID: -6911265404689696774
+      spriteID: 34e2b0dae9a0d3200800000000000000
+      internalID: 161296838279507523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dogsprite_1
+      name: pet_sprite_3_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 25
-        width: 17
-        height: 27
+        x: 63
+        y: 11
+        width: 66
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 571871334fd70cbb0800000000000000
-      internalID: -4917792305305910923
+      spriteID: 8fcfecbe64bead9f0800000000000000
+      internalID: -442782923506123528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dogsprite_2
+      name: pet_sprite_3_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 24
+        x: 132
+        y: 11
+        width: 56
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9fb3077a2125f6c0800000000000000
-      internalID: -4110342618636632165
+      spriteID: 42657ad0105f5e7d0800000000000000
+      internalID: -2889634201015462364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dogsprite_3
+      name: pet_sprite_3_3
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 28
-        height: 24
+        x: 191
+        y: 11
+        width: 65
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbf1851b20e1e1bc0800000000000000
-      internalID: -3810575237794750531
+      spriteID: 0aa973b4725dc6080800000000000000
+      internalID: -9192738374627648864
       vertices: []
       indices: 
       edges: []
@@ -235,11 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dogsprite_0: -6911265404689696774
-      dogsprite_1: -4917792305305910923
-      dogsprite_2: -4110342618636632165
-      dogsprite_3: -3810575237794750531
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

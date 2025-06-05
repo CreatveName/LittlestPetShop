@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 1db9a581c9331a744ab37c5e660a3247
+guid: d25c0ac7712db0a4f9b121f153d1a2c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6911265404689696774
-    second: dogsprite_0
+      213: 538933601580558466
+    second: npc_1_0
   - first:
-      213: -4917792305305910923
-    second: dogsprite_1
+      213: -5417448444927499258
+    second: npc_1_1
   - first:
-      213: -4110342618636632165
-    second: dogsprite_2
-  - first:
-      213: -3810575237794750531
-    second: dogsprite_3
+      213: 6791255569679993924
+    second: npc_1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 52
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,43 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dogsprite_0
+      name: npc_1_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 26
-        width: 17
-        height: 26
+        x: 8
+        y: 67
+        width: 48
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af7360d5bb04610a0800000000000000
-      internalID: -6911265404689696774
+      spriteID: 2882bb7514daa7700800000000000000
+      internalID: 538933601580558466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dogsprite_1
+      name: npc_1_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 25
-        width: 17
-        height: 27
+        x: 72
+        y: 67
+        width: 48
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 571871334fd70cbb0800000000000000
-      internalID: -4917792305305910923
+      spriteID: 604aa1b975b51d4b0800000000000000
+      internalID: -5417448444927499258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dogsprite_2
+      name: npc_1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 24
+        x: 12
+        y: 3
+        width: 41
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,30 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9fb3077a2125f6c0800000000000000
-      internalID: -4110342618636632165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dogsprite_3
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 0
-        width: 28
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbf1851b20e1e1bc0800000000000000
-      internalID: -3810575237794750531
+      spriteID: 44c4ba185f26f3e50800000000000000
+      internalID: 6791255569679993924
       vertices: []
       indices: 
       edges: []
@@ -236,10 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dogsprite_0: -6911265404689696774
-      dogsprite_1: -4917792305305910923
-      dogsprite_2: -4110342618636632165
-      dogsprite_3: -3810575237794750531
+      npc_1_0: 538933601580558466
+      npc_1_1: -5417448444927499258
+      npc_1_2: 6791255569679993924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene Transitions.unity
     guid: 183736caceacc0a4c9b4b6385ed73e7f
   - enabled: 1
-    path: Assets/Scenes/Overworld.unity
+    path: Assets/Scenes/Day 1.unity
     guid: 88a23e04b57db2f49adb590ea06222e7
   - enabled: 1
     path: Assets/Scenes/NPC House.unity
