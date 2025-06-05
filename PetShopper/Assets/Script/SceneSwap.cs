@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class SceneSwap : MonoBehaviour
 {
+
+    [SerializeField]
+    private Animator sceneAnim;
 
     public string PlayerTag = "Player";
     public string SceneName;
@@ -11,8 +15,17 @@ public class SceneSwap : MonoBehaviour
     {
         if(other.CompareTag(PlayerTag))
         {
-            SceneManager.LoadScene(SceneName);
+            StartCoroutine("LoadSceneWithTransition");
         }
+    }
+
+    public IEnumerator LoadSceneWithTransition()
+    {
+        sceneAnim.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadSceneAsync(SceneName);
     }
 
 }
