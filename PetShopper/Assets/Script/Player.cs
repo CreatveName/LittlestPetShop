@@ -46,12 +46,12 @@ public class Player : MonoBehaviour
             pAnim.SetBool("Left", false);
             pAnim.SetBool("Right", false);
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 pAnim.SetBool("Up", true);
                 pAnim.SetBool("Down", false);
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 pAnim.SetBool("Down", true);
                 pAnim.SetBool("Up", false);
@@ -69,12 +69,12 @@ public class Player : MonoBehaviour
             pAnim.SetBool("Up", false);
             pAnim.SetBool("Down", false);
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 pAnim.SetBool("Right", true);
                 pAnim.SetBool("Left", false);
             }
-            else if (Input.GetKey(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 pAnim.SetBool("Left", true);
                 pAnim.SetBool("Right", false);
