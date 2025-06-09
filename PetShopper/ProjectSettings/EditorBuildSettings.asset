@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PetShop.unity
     guid: df65e888cb70b9342bd458af0ca66e4c
+  - enabled: 1
+    path: Assets/Scenes/NPC House 1.unity
+    guid: 40510e566047f434e8ec3296ad1d3344
+  - enabled: 1
+    path: Assets/Scenes/NPC House 2.unity
+    guid: 65205f9b30c2b604c988a985aba30024
+  - enabled: 1
+    path: Assets/Scenes/NPC House 3.unity
+    guid: 9183b2d0484c7cb4da6df816d7079a1c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
