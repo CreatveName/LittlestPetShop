@@ -636,10 +636,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2396380425223025695, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396380425223025695, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2643418322924928448, guid: 05f6bc73daf2eca4aa4845fd37587352, type: 3}
+    - target: {fileID: 2396380425223025695, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190453429515514718, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3781866693948617776, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2025964986}
+    - target: {fileID: 3781866693948617776, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeChoice
+      objectReference: {fileID: 0}
     - target: {fileID: 5221838330603800368, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
       propertyPath: m_Name
       value: DialougePanel
@@ -648,6 +668,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2025964986}
+    - target: {fileID: 5299991362394747201, guid: c9169396c537d0849bfc7dbff815d830, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeChoice
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
