@@ -18,8 +18,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMovement();
         InteractDialogue();
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+        PlayerMovement();
         pAnim.SetFloat("Speed", Input.GetAxisRaw("Horizontal"));
         pAnim.SetFloat("SpeedUp", Input.GetAxisRaw("Vertical"));
     }
@@ -101,12 +105,6 @@ public class Player : MonoBehaviour
 
     private void InteractDialogue()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            _speed = 0f; // for now, have to do anims later or more refined
-            return;
-        }
-
         if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
         {
             currentInteractable.Interact();

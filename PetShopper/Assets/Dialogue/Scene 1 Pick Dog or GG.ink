@@ -5,8 +5,7 @@ Player approaches a small, shivering dog in the middle of an empty dirt path. #s
     ->loop
 
 === loop ===
-Player approaches a small, shivering dog in the middle of
-an empty dirt path.
+Player approaches a small, shivering dog in the middle ofan empty dirt path.
 +[Pick up the dog]
     ->finish
 +[Leave it alone]
