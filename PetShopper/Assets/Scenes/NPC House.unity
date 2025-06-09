@@ -837,8 +837,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd36bfeb46ff717498f1a64f14ea9f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneAnim: {fileID: 0}
   PlayerTag: Player
   SceneName: Overworld
+  timeToWait: 0
 --- !u!1001 &6074817247741371528
 PrefabInstance:
   m_ObjectHideFlags: 0
