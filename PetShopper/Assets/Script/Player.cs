@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
         InteractDialogue();
+        pAnim.SetFloat("Speed", Input.GetAxisRaw("Horizontal"));
+        pAnim.SetFloat("SpeedUp", Input.GetAxisRaw("Vertical"));
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -83,14 +85,13 @@ public class Player : MonoBehaviour
                 pAnim.SetBool("Left", false);
             }
 
-            transform.Translate(Input.GetAxisRaw("Horizontal") * _speed * Time.deltaTime, 0, 0); 
+            transform.Translate(Input.GetAxisRaw("Horizontal") * _speed * Time.deltaTime, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
             _speed = _sprint;
         }
-
         else
         {
             _speed = 2.0f;
@@ -102,6 +103,7 @@ public class Player : MonoBehaviour
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
+            _speed = 0f; // for now, have to do anims later or more refined
             return;
         }
 
